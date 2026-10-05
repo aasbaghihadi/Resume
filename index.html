@@ -3,28 +3,425 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#121212">
+  <meta name="theme-color" content="#0B100E">
+
   <meta name="description" content="Hadi Asbaghi — Business Development, Business Consulting, Value Proposition, Growth Strategy and Commercialization.">
+
   <meta property="og:title" content="Hadi Asbaghi — Business Development & Growth Strategy">
   <meta property="og:description" content="I help businesses turn unclear opportunities into stronger value propositions, better business models and executable growth paths.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/">
   <meta property="og:image" content="assets/og-placeholder.svg">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hadi Asbaghi — Business Development & Growth Strategy">
   <meta name="twitter:description" content="Business Development · Business Consulting · Value Proposition · Growth · Commercialization">
   <meta name="twitter:image" content="assets/og-placeholder.svg">
+
   <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23D8FF5A'/%3E%3Cpath d='M22 66L41 33l15 22 10-16 12 27H22Z' fill='%23121212'/%3E%3C/svg%3E">
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23D9FF4F'/%3E%3Cpath d='M22 66L41 33l15 22 10-16 12 27H22Z' fill='%230B100E'/%3E%3C/svg%3E"
+  >
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- INDEX-ONLY CONTRAST OVERRIDES -->
+  <style id="index-contrast-overrides">
+    :root{
+      --ink:#0B100E;
+      --ink-2:#18201C;
+      --paper:#F7F4EC;
+      --cream:#EEE8DB;
+      --lime:#D9FF4F;
+      --blue:#C8D4FF;
+      --purple:#F0C8F2;
+      --sand:#E8DCC9;
+      --muted:#414943;
+      --line:rgba(11,16,14,.20);
+    }
+
+    body{
+      background:var(--paper);
+      color:var(--ink);
+    }
+
+    /* =========================
+       DARK SURFACES
+    ========================== */
+
+    .dark-grid,
+    .selected,
+    .contact{
+      background-color:#0B100E;
+      color:#F8FAF9;
+    }
+
+    .dark-grid .hero-kicker,
+    .dark-grid .hero-sub,
+    .dark-grid .light-text,
+    .dark-grid .section-label.light,
+    .dark-grid .eyebrow,
+    .selected .light-text,
+    .selected .section-label.light,
+    .contact .contact-lead,
+    .contact-card-title{
+      color:#E8EEEB !important;
+    }
+
+    .dark-grid h1,
+    .dark-grid h2,
+    .dark-grid h3,
+    .dark-grid p,
+    .selected h1,
+    .selected h2,
+    .selected h3,
+    .selected p,
+    .contact h1,
+    .contact h2,
+    .contact h3,
+    .contact p{
+      color:#F8FAF9;
+    }
+
+    .hero h1 em,
+    .thinking-copy blockquote span{
+      color:#D9FF4F;
+    }
+
+    .hero-tags span{
+      color:#E0E7E3 !important;
+      border-color:rgba(255,255,255,.28) !important;
+    }
+
+    .art-note{
+      color:#D6DEDA !important;
+    }
+
+    .art-note strong{
+      color:#FFFFFF !important;
+    }
+
+    .hero-art .art-index{
+      color:#BFC8C3 !important;
+    }
+
+    /* =========================
+       HERO SVG
+    ========================== */
+
+    .hero-svg .svg-node circle{
+      fill:#18201D !important;
+      stroke:#89958F !important;
+    }
+
+    .hero-svg .svg-node.blue circle{
+      stroke:#9DB1FF !important;
+    }
+
+    .hero-svg .svg-node.purple circle{
+      stroke:#E0A9E5 !important;
+    }
+
+    .hero-svg .svg-node text{
+      fill:#FFFFFF !important;
+    }
+
+    .hero-svg .svg-node .small{
+      fill:#D6DEDA !important;
+    }
+
+    .hero-svg .svg-line{
+      opacity:.62;
+    }
+
+    /* =========================
+       LIGHT SURFACES
+    ========================== */
+
+    .cream,
+    .services,
+    .method,
+    .experience,
+    .position{
+      color:#0B100E;
+    }
+
+    .section-head > p,
+    .position .lead,
+    .experience-intro p,
+    .method-step p,
+    .timeline-item p,
+    .section-label,
+    .timeline-meta,
+    .company{
+      color:#3F4842;
+    }
+
+    .position-content h2 span,
+    .section-head h2 span,
+    .experience-intro h2 span{
+      color:#414A44;
+    }
+
+    .mini-quote{
+      background:#FBF8F0;
+      color:#0B100E;
+      border-left-color:#0B100E;
+    }
+
+    /* =========================
+       SERVICE CARDS
+    ========================== */
+
+    .service-main{
+      background:#101815 !important;
+      color:#FFFFFF !important;
+      border:1px solid #46544D;
+    }
+
+    .service-main p,
+    .dark-card p{
+      color:#E8EEEB !important;
+    }
+
+    .service-main .pill-row span,
+    .dark-card .pill-row span{
+      color:#DCE4DF !important;
+      border-color:rgba(255,255,255,.28) !important;
+    }
+
+    .blue-card{
+      background:#C8D4FF !important;
+      color:#091124 !important;
+    }
+
+    .lime-card{
+      background:#D9FF4F !important;
+      color:#09110B !important;
+    }
+
+    .sand-card{
+      background:#E8DCC9 !important;
+      color:#17140F !important;
+    }
+
+    .purple-card{
+      background:#F0C8F2 !important;
+      color:#211022 !important;
+    }
+
+    .blue-card p,
+    .lime-card p,
+    .sand-card p,
+    .purple-card p,
+    .blue-card .service-lines span,
+    .lime-card .service-lines span,
+    .sand-card .service-lines span,
+    .purple-card .service-lines span{
+      color:inherit !important;
+    }
+
+    .blue-card .service-lines,
+    .lime-card .service-lines,
+    .sand-card .service-lines,
+    .purple-card .service-lines{
+      border-top-color:rgba(9,16,14,.28);
+    }
+
+    .service-card .service-lines span{
+      opacity:1;
+    }
+
+    /* =========================
+       SELECTED WORK
+    ========================== */
+
+    .selected{
+      background:#09100D !important;
+    }
+
+    .work-wide{
+      background:#1D2823 !important;
+      color:#FFFFFF !important;
+      border:1px solid #4B5A52 !important;
+    }
+
+    .work-wide .work-top,
+    .work-wide .work-copy p{
+      color:#E4EBE7 !important;
+    }
+
+    .work-grid .work-card:nth-child(2){
+      background:#C8D4FF !important;
+      color:#091124 !important;
+    }
+
+    .work-grid .work-card:nth-child(2) .work-top{
+      color:#253149 !important;
+    }
+
+    .work-grid .work-card:nth-child(2) .work-copy p{
+      color:#172033 !important;
+    }
+
+    .work-grid .work-card:nth-child(3){
+      background:#F1E9DA !important;
+      color:#12100D !important;
+    }
+
+    .work-grid .work-card:nth-child(3) .work-top{
+      color:#514A40 !important;
+    }
+
+    .work-grid .work-card:nth-child(3) .work-copy p{
+      color:#28231D !important;
+    }
+
+    .work-card h3{
+      color:inherit !important;
+    }
+
+    .work-card .tags span{
+      color:inherit;
+      border-color:currentColor;
+    }
+
+    .work-wide .tags span{
+      color:#E3E9E6 !important;
+      border-color:rgba(255,255,255,.28) !important;
+    }
+
+    /* =========================
+       THINKING / CHART
+    ========================== */
+
+    .thinking-visual{
+      background:#17211D !important;
+      border-color:#4B5B53 !important;
+    }
+
+    .thinking-visual svg text[fill="#777"]{
+      fill:#D5DDD9 !important;
+    }
+
+    .thinking-visual svg text[fill="#fff"]{
+      fill:#FFFFFF !important;
+    }
+
+    .visual-caption{
+      color:#D6DEDA !important;
+    }
+
+    .visual-caption strong{
+      color:#FFFFFF !important;
+    }
+
+    /* =========================
+       TIMELINE
+    ========================== */
+
+    .timeline-item h3{
+      color:#0B100E;
+    }
+
+    .timeline-point:before{
+      background:rgba(11,16,14,.23);
+    }
+
+    .timeline-point span{
+      background:var(--paper);
+      border-color:#6A746E;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about{
+      background:#C8D4FF !important;
+      color:#091124 !important;
+    }
+
+    .about-panel p{
+      color:#172033 !important;
+    }
+
+    .about-meta span{
+      color:#253149;
+    }
+
+    .about-visual{
+      background:#EAF0FF !important;
+      border:1px solid rgba(9,17,36,.14);
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-card{
+      background:#18231F !important;
+      border-color:#52645A !important;
+    }
+
+    .contact-card li{
+      color:#F1F5F3 !important;
+      border-top-color:rgba(255,255,255,.20);
+    }
+
+    .contact-foot{
+      color:#C5CEC9 !important;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    .site-header{
+      background:rgba(8,12,10,.96);
+      border-bottom-color:rgba(255,255,255,.14);
+    }
+
+    .nav{
+      color:#DDE5E1;
+    }
+
+    .nav a:hover,
+    .nav a.active{
+      color:#FFFFFF;
+    }
+
+    /* =========================
+       ACCESSIBLE FOCUS
+    ========================== */
+
+    a:focus-visible{
+      outline:3px solid #D9FF4F !important;
+      outline-offset:4px;
+    }
+
+    /* Remove old visible numbering */
+    .art-index,
+    .card-index{
+      display:none !important;
+    }
+  </style>
+
   <script defer src="script.js"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-      <a href="#top" class="logo" aria-label="Hadi Asbaghi home">HA<span>.</span></a>
+
+      <a href="#top" class="logo" aria-label="Hadi Asbaghi home">
+        HA<span>.</span>
+      </a>
+
       <nav class="nav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#thinking">How I Think</a>
@@ -32,22 +429,45 @@
         <a href="#experience">Experience</a>
         <a href="#contact" class="nav-cta">Let's talk ↗</a>
       </nav>
+
     </div>
   </header>
 
   <main id="main">
+
     <!-- HERO -->
     <section class="hero section dark-grid" aria-labelledby="hero-title">
       <div class="container hero-grid">
+
         <div class="hero-copy reveal">
-          <div class="eyebrow light"><span class="dot"></span> BUSINESS DEVELOPMENT · CONSULTING · GROWTH</div>
-          <p class="hero-kicker">I work where business problems are still too fuzzy to become good decisions.</p>
-          <h1 id="hero-title">Build a better <em>value equation.</em></h1>
-          <p class="hero-sub">I help businesses uncover growth opportunities, sharpen their value proposition, redesign business models and turn strategy into a practical commercial path.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="button button-acid">Start a conversation <span>↗</span></a>
-            <a href="#services" class="text-link light-link">Explore services <span>↓</span></a>
+          <div class="eyebrow light">
+            <span class="dot"></span>
+            BUSINESS DEVELOPMENT · CONSULTING · GROWTH
           </div>
+
+          <p class="hero-kicker">
+            I work where business problems are still too fuzzy to become good decisions.
+          </p>
+
+          <h1 id="hero-title">
+            Build a better <em>value equation.</em>
+          </h1>
+
+          <p class="hero-sub">
+            I help businesses uncover growth opportunities, sharpen their value proposition,
+            redesign business models and turn strategy into a practical commercial path.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="button button-acid">
+              Start a conversation <span>↗</span>
+            </a>
+
+            <a href="#services" class="text-link light-link">
+              Explore services <span>↓</span>
+            </a>
+          </div>
+
           <div class="hero-tags" aria-label="Core capabilities">
             <span>Business Development</span>
             <span>Business Consulting</span>
@@ -56,316 +476,1197 @@
           </div>
         </div>
 
-        <div class="hero-art reveal" aria-label="Abstract business value system illustration">
-          <svg class="hero-svg" viewBox="0 0 640 610" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+        <div
+          class="hero-art reveal"
+          aria-label="Abstract business value system illustration"
+        >
+          <svg
+            class="hero-svg"
+            viewBox="0 0 640 610"
+            role="img"
+            aria-labelledby="hero-svg-title hero-svg-desc"
+          >
             <title id="hero-svg-title">Value equation system</title>
-            <desc id="hero-svg-desc">An abstract diagram showing need, value, economics, growth and action connected around a central value frontier.</desc>
+
+            <desc id="hero-svg-desc">
+              An abstract diagram showing need, value, economics, growth and action
+              connected around a central value frontier.
+            </desc>
+
             <defs>
-              <linearGradient id="heroGlow" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="#D8FF5A" stop-opacity=".95"/>
-                <stop offset="100%" stop-color="#9AF0DA" stop-opacity=".85"/>
+              <linearGradient
+                id="heroGlow"
+                x1="0"
+                x2="1"
+                y1="0"
+                y2="1"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#D8FF5A"
+                  stop-opacity=".95"
+                />
+                <stop
+                  offset="100%"
+                  stop-color="#9AF0DA"
+                  stop-opacity=".85"
+                />
               </linearGradient>
-              <filter id="blur"><feGaussianBlur stdDeviation="20"/></filter>
+
+              <filter id="blur">
+                <feGaussianBlur stdDeviation="20"/>
+              </filter>
             </defs>
-            <circle cx="318" cy="296" r="168" fill="url(#heroGlow)" opacity=".16" filter="url(#blur)"/>
-            <path d="M96 430 C168 370, 170 210, 314 176 C425 149, 504 222, 546 116" fill="none" stroke="#D8FF5A" stroke-width="2" stroke-dasharray="6 10" opacity=".55"/>
-            <path d="M74 168 C176 214, 206 100, 344 128 C472 154, 470 318, 568 350" fill="none" stroke="#8AA4FF" stroke-width="1.5" stroke-dasharray="2 10" opacity=".65"/>
+
+            <circle
+              cx="318"
+              cy="296"
+              r="168"
+              fill="url(#heroGlow)"
+              opacity=".16"
+              filter="url(#blur)"
+            />
+
+            <path
+              d="M96 430 C168 370, 170 210, 314 176 C425 149, 504 222, 546 116"
+              fill="none"
+              stroke="#D8FF5A"
+              stroke-width="2"
+              stroke-dasharray="6 10"
+              opacity=".55"
+            />
+
+            <path
+              d="M74 168 C176 214, 206 100, 344 128 C472 154, 470 318, 568 350"
+              fill="none"
+              stroke="#8AA4FF"
+              stroke-width="1.5"
+              stroke-dasharray="2 10"
+              opacity=".65"
+            />
+
             <g class="svg-line" opacity=".45">
               <line x1="320" y1="298" x2="127" y2="155"/>
               <line x1="320" y1="298" x2="512" y2="165"/>
               <line x1="320" y1="298" x2="502" y2="462"/>
               <line x1="320" y1="298" x2="120" y2="463"/>
             </g>
+
             <g>
-              <circle cx="320" cy="298" r="92" fill="#191919" stroke="#D8FF5A" stroke-width="2"/>
-              <circle cx="320" cy="298" r="74" fill="none" stroke="#D8FF5A" stroke-opacity=".28" stroke-dasharray="5 12"/>
-              <text x="320" y="290" text-anchor="middle" fill="#ffffff" font-size="22" font-family="Arial, sans-serif" font-weight="700">VALUE</text>
-              <text x="320" y="316" text-anchor="middle" fill="#A8A8A8" font-size="10" font-family="Arial, sans-serif" letter-spacing="2">FRONTIER</text>
+              <circle
+                cx="320"
+                cy="298"
+                r="92"
+                fill="#191919"
+                stroke="#D8FF5A"
+                stroke-width="2"
+              />
+
+              <circle
+                cx="320"
+                cy="298"
+                r="74"
+                fill="none"
+                stroke="#D8FF5A"
+                stroke-opacity=".28"
+                stroke-dasharray="5 12"
+              />
+
+              <text
+                x="320"
+                y="290"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-size="22"
+                font-family="Arial, sans-serif"
+                font-weight="700"
+              >
+                VALUE
+              </text>
+
+              <text
+                x="320"
+                y="316"
+                text-anchor="middle"
+                fill="#A8A8A8"
+                font-size="10"
+                font-family="Arial, sans-serif"
+                letter-spacing="2"
+              >
+                FRONTIER
+              </text>
             </g>
-            <g class="svg-node"><circle cx="127" cy="155" r="44"/><text x="127" y="151">NEED</text><text x="127" y="168" class="small">CUSTOMER</text></g>
-            <g class="svg-node blue"><circle cx="512" cy="165" r="44"/><text x="512" y="151">MODEL</text><text x="512" y="168" class="small">ECONOMICS</text></g>
-            <g class="svg-node"><circle cx="502" cy="462" r="44"/><text x="502" y="458">GROWTH</text><text x="502" y="475" class="small">GO-TO-MARKET</text></g>
-            <g class="svg-node purple"><circle cx="120" cy="463" r="44"/><text x="120" y="459">ACTION</text><text x="120" y="476" class="small">EXECUTION</text></g>
-            <text x="320" y="585" text-anchor="middle" fill="#737373" font-size="11" font-family="Arial, sans-serif" letter-spacing="2.6">QUESTION → DESIGN → TEST → SCALE</text>
+
+            <g class="svg-node">
+              <circle cx="127" cy="155" r="44"/>
+              <text x="127" y="151">NEED</text>
+              <text x="127" y="168" class="small">CUSTOMER</text>
+            </g>
+
+            <g class="svg-node blue">
+              <circle cx="512" cy="165" r="44"/>
+              <text x="512" y="151">MODEL</text>
+              <text x="512" y="168" class="small">ECONOMICS</text>
+            </g>
+
+            <g class="svg-node">
+              <circle cx="502" cy="462" r="44"/>
+              <text x="502" y="458">GROWTH</text>
+              <text x="502" y="475" class="small">GO-TO-MARKET</text>
+            </g>
+
+            <g class="svg-node purple">
+              <circle cx="120" cy="463" r="44"/>
+              <text x="120" y="459">ACTION</text>
+              <text x="120" y="476" class="small">EXECUTION</text>
+            </g>
+
+            <text
+              x="320"
+              y="585"
+              text-anchor="middle"
+              fill="#737373"
+              font-size="11"
+              font-family="Arial, sans-serif"
+              letter-spacing="2.6"
+            >
+              QUESTION → DESIGN → TEST → SCALE
+            </text>
           </svg>
-          <div class="art-index">01 / 04</div>
-          <div class="art-note">Not a prettier strategy deck.<br><strong>A sharper business logic.</strong></div>
+
+          <div class="art-note">
+            Not a prettier strategy deck.<br>
+            <strong>A sharper business logic.</strong>
+          </div>
         </div>
+
       </div>
     </section>
+
 
     <!-- STRIP -->
     <section class="strip" aria-label="Core positioning">
       <div class="strip-track">
-        <span>OPPORTUNITY</span><b>×</b><span>VALUE</span><b>×</b><span>ECONOMICS</span><b>×</b><span>GROWTH</span><b>×</b><span>EXECUTION</span><b>×</b>
-        <span>OPPORTUNITY</span><b>×</b><span>VALUE</span><b>×</b><span>ECONOMICS</span><b>×</b><span>GROWTH</span><b>×</b><span>EXECUTION</span>
+        <span>OPPORTUNITY</span>
+        <b>×</b>
+        <span>VALUE</span>
+        <b>×</b>
+        <span>ECONOMICS</span>
+        <b>×</b>
+        <span>GROWTH</span>
+        <b>×</b>
+        <span>EXECUTION</span>
+        <b>×</b>
+
+        <span>OPPORTUNITY</span>
+        <b>×</b>
+        <span>VALUE</span>
+        <b>×</b>
+        <span>ECONOMICS</span>
+        <b>×</b>
+        <span>GROWTH</span>
+        <b>×</b>
+        <span>EXECUTION</span>
       </div>
     </section>
+
 
     <!-- POSITIONING -->
-    <section class="section cream position" aria-labelledby="position-title">
+    <section
+      class="section cream position"
+      aria-labelledby="position-title"
+    >
       <div class="container two-col">
-        <div class="section-label reveal">01 / POSITIONING</div>
-        <div class="position-content reveal">
-          <h2 id="position-title">I help businesses find the space <span>between “what customers want” and “what the business can afford.”</span></h2>
-          <p class="lead">That space is where stronger propositions are built: more relevant to the customer, more defensible in the market, and healthier for the business.</p>
-          <div class="mini-quote">“Growth is often hidden inside the way a problem is framed.”</div>
+
+        <div class="section-label reveal">
+          POSITIONING
         </div>
+
+        <div class="position-content reveal">
+          <h2 id="position-title">
+            I help businesses find the space
+            <span>
+              between “what customers want” and “what the business can afford.”
+            </span>
+          </h2>
+
+          <p class="lead">
+            That space is where stronger propositions are built:
+            more relevant to the customer, more defensible in the market,
+            and healthier for the business.
+          </p>
+
+          <div class="mini-quote">
+            “Growth is often hidden inside the way a problem is framed.”
+          </div>
+        </div>
+
       </div>
     </section>
 
+
     <!-- SERVICES -->
-    <section class="section services" id="services" aria-labelledby="services-title">
+    <section
+      class="section services"
+      id="services"
+      aria-labelledby="services-title"
+    >
       <div class="container">
+
         <div class="section-head reveal">
           <div>
-            <div class="section-label">02 / WHAT I CAN HELP WITH</div>
-            <h2 id="services-title">Business problems,<br><span>not generic deliverables.</span></h2>
+            <div class="section-label">
+              WHAT I CAN HELP WITH
+            </div>
+
+            <h2 id="services-title">
+              Business problems,<br>
+              <span>not generic deliverables.</span>
+            </h2>
           </div>
-          <p>My work starts from a business question and ends with a clearer decision, a stronger model or a practical path to market.</p>
+
+          <p>
+            My work starts from a business question and ends with
+            a clearer decision, a stronger model or a practical path to market.
+          </p>
         </div>
 
+
         <div class="service-layout">
+
           <article class="service-card dark-card service-main reveal">
-            <div class="card-index">01</div>
-            <h3>Business Development<br>&amp; Opportunity Design</h3>
-            <p>Find new growth spaces, customer segments, partnerships and commercial opportunities that can become real business—not just interesting ideas.</p>
-            <div class="pill-row"><span>Market Opportunity</span><span>Business Expansion</span><span>Partnerships</span></div>
+            <h3>
+              Business Development<br>
+              &amp; Opportunity Design
+            </h3>
+
+            <p>
+              Find new growth spaces, customer segments,
+              partnerships and commercial opportunities that can become
+              real business—not just interesting ideas.
+            </p>
+
+            <div class="pill-row">
+              <span>Market Opportunity</span>
+              <span>Business Expansion</span>
+              <span>Partnerships</span>
+            </div>
+
             <div class="card-arrow">↗</div>
           </article>
 
+
           <article class="service-card blue-card reveal">
-            <div class="card-index">02</div>
             <h3>Business Consulting</h3>
-            <p>Structure an unclear business problem, challenge assumptions, compare strategic options and turn scattered inputs into a decision framework.</p>
-            <div class="service-lines"><span>Problem framing</span><span>Strategic options</span><span>Decision support</span></div>
+
+            <p>
+              Structure an unclear business problem,
+              challenge assumptions, compare strategic options
+              and turn scattered inputs into a decision framework.
+            </p>
+
+            <div class="service-lines">
+              <span>Problem framing</span>
+              <span>Strategic options</span>
+              <span>Decision support</span>
+            </div>
           </article>
+
 
           <article class="service-card lime-card reveal">
-            <div class="card-index">03</div>
             <h3>Value Proposition Design</h3>
-            <p>Redesign the value proposition around real customer and non-customer needs—and search for a new value–cost boundary.</p>
-            <div class="service-lines"><span>Customer insight</span><span>Value architecture</span><span>Differentiation</span></div>
+
+            <p>
+              Redesign the value proposition around real customer
+              and non-customer needs—and search for a new value–cost boundary.
+            </p>
+
+            <div class="service-lines">
+              <span>Customer insight</span>
+              <span>Value architecture</span>
+              <span>Differentiation</span>
+            </div>
           </article>
+
 
           <article class="service-card sand-card reveal">
-            <div class="card-index">04</div>
-            <h3>Business Model &amp; Revenue Logic</h3>
-            <p>Clarify who creates value, who pays, how money flows and which model can support sustainable growth.</p>
-            <div class="service-lines"><span>Business model</span><span>Revenue logic</span><span>Commercial economics</span></div>
+            <h3>
+              Business Model &amp; Revenue Logic
+            </h3>
+
+            <p>
+              Clarify who creates value, who pays,
+              how money flows and which model can support sustainable growth.
+            </p>
+
+            <div class="service-lines">
+              <span>Business model</span>
+              <span>Revenue logic</span>
+              <span>Commercial economics</span>
+            </div>
           </article>
+
 
           <article class="service-card purple-card reveal">
-            <div class="card-index">05</div>
-            <h3>Growth &amp; Commercialization</h3>
-            <p>Translate a good proposition into a route to market: offer, journey, acquisition, conversion, launch, partnerships and scale.</p>
-            <div class="service-lines"><span>Go-to-market</span><span>Growth strategy</span><span>Commercialization</span></div>
+            <h3>
+              Growth &amp; Commercialization
+            </h3>
+
+            <p>
+              Translate a good proposition into a route to market:
+              offer, journey, acquisition, conversion,
+              launch, partnerships and scale.
+            </p>
+
+            <div class="service-lines">
+              <span>Go-to-market</span>
+              <span>Growth strategy</span>
+              <span>Commercialization</span>
+            </div>
           </article>
 
+
           <article class="service-card dark-card reveal">
-            <div class="card-index">06</div>
-            <h3>Product, Journey &amp; Ecosystem Review</h3>
-            <p>When growth stalls, inspect the product, customer journey, incentives and partner ecosystem as one connected system.</p>
-            <div class="pill-row"><span>Product Strategy</span><span>Customer Journey</span><span>Ecosystem</span></div>
+            <h3>
+              Product, Journey &amp; Ecosystem Review
+            </h3>
+
+            <p>
+              When growth stalls, inspect the product,
+              customer journey, incentives and partner ecosystem
+              as one connected system.
+            </p>
+
+            <div class="pill-row">
+              <span>Product Strategy</span>
+              <span>Customer Journey</span>
+              <span>Ecosystem</span>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
 
+
     <!-- THINKING -->
-    <section class="section thinking dark-grid" id="thinking" aria-labelledby="thinking-title">
+    <section
+      class="section thinking dark-grid"
+      id="thinking"
+      aria-labelledby="thinking-title"
+    >
       <div class="container thinking-grid">
+
         <div class="thinking-copy reveal">
-          <div class="section-label light">03 / HOW I THINK</div>
-          <h2 id="thinking-title">Create a better value–cost boundary.</h2>
-          <p class="lead light-text">One of the questions I enjoy most is simple:</p>
-          <blockquote>Can we make the customer experience meaningfully better <span>while also making the business economics better?</span></blockquote>
-          <p class="light-text">Sometimes the answer is a new feature. Sometimes it is a simpler offer, a different packaging logic, a new partner model, a different route to market—or a different way of defining the problem.</p>
+
+          <div class="section-label light">
+            HOW I THINK
+          </div>
+
+          <h2 id="thinking-title">
+            Create a better value–cost boundary.
+          </h2>
+
+          <p class="lead light-text">
+            One of the questions I enjoy most is simple:
+          </p>
+
+          <blockquote>
+            Can we make the customer experience meaningfully better
+            <span>while also making the business economics better?</span>
+          </blockquote>
+
+          <p class="light-text">
+            Sometimes the answer is a new feature.
+            Sometimes it is a simpler offer, a different packaging logic,
+            a new partner model, a different route to market—or a different
+            way of defining the problem.
+          </p>
+
         </div>
 
+
         <div class="thinking-visual reveal">
-          <svg viewBox="0 0 560 500" role="img" aria-label="Value cost frontier chart">
+
+          <svg
+            viewBox="0 0 560 500"
+            role="img"
+            aria-label="Value cost frontier chart"
+          >
+
             <defs>
-              <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-                <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1"/>
+
+              <pattern
+                id="grid"
+                width="28"
+                height="28"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 28 0 L 0 0 0 28"
+                  fill="none"
+                  stroke="#ffffff"
+                  stroke-opacity=".07"
+                  stroke-width="1"
+                />
               </pattern>
-              <linearGradient id="frontier" x1="0" x2="1" y1="1" y2="0">
+
+              <linearGradient
+                id="frontier"
+                x1="0"
+                x2="1"
+                y1="1"
+                y2="0"
+              >
                 <stop offset="0" stop-color="#8AA4FF"/>
                 <stop offset="1" stop-color="#D8FF5A"/>
               </linearGradient>
+
             </defs>
-            <rect width="560" height="500" fill="url(#grid)"/>
-            <line x1="64" y1="432" x2="514" y2="432" stroke="#ffffff" stroke-opacity=".25"/>
-            <line x1="64" y1="432" x2="64" y2="58" stroke="#ffffff" stroke-opacity=".25"/>
-            <path d="M88 394 C182 376, 208 304, 262 278 C334 243, 380 178, 468 96" fill="none" stroke="#ffffff" stroke-opacity=".16" stroke-width="34" stroke-linecap="round"/>
-            <path d="M88 394 C182 376, 208 304, 262 278 C334 243, 380 178, 468 96" fill="none" stroke="url(#frontier)" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="153" cy="366" r="9" fill="#FFFFFF"/><circle cx="292" cy="257" r="9" fill="#D8FF5A"/><circle cx="432" cy="128" r="9" fill="#8AA4FF"/>
-            <text x="84" y="92" fill="#777" font-size="11" font-family="Arial">HIGHER CUSTOMER VALUE</text>
-            <text x="65" y="461" fill="#777" font-size="11" font-family="Arial">HIGHER COST</text>
-            <text x="432" y="80" fill="#D8FF5A" font-size="12" font-family="Arial" font-weight="700">NEW FRONTIER</text>
-            <text x="110" y="347" fill="#fff" fill-opacity=".72" font-size="11" font-family="Arial">CURRENT OFFER</text>
-            <text x="250" y="232" fill="#fff" fill-opacity=".78" font-size="11" font-family="Arial">RE-DESIGN</text>
+
+            <rect
+              width="560"
+              height="500"
+              fill="url(#grid)"
+            />
+
+            <line
+              x1="64"
+              y1="432"
+              x2="514"
+              y2="432"
+              stroke="#ffffff"
+              stroke-opacity=".25"
+            />
+
+            <line
+              x1="64"
+              y1="432"
+              x2="64"
+              y2="58"
+              stroke="#ffffff"
+              stroke-opacity=".25"
+            />
+
+            <path
+              d="M88 394 C182 376, 208 304, 262 278 C334 243, 380 178, 468 96"
+              fill="none"
+              stroke="#ffffff"
+              stroke-opacity=".16"
+              stroke-width="34"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M88 394 C182 376, 208 304, 262 278 C334 243, 380 178, 468 96"
+              fill="none"
+              stroke="url(#frontier)"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+
+            <circle
+              cx="153"
+              cy="366"
+              r="9"
+              fill="#FFFFFF"
+            />
+
+            <circle
+              cx="292"
+              cy="257"
+              r="9"
+              fill="#D8FF5A"
+            />
+
+            <circle
+              cx="432"
+              cy="128"
+              r="9"
+              fill="#8AA4FF"
+            />
+
+            <text
+              x="84"
+              y="92"
+              fill="#777"
+              font-size="11"
+              font-family="Arial"
+            >
+              HIGHER CUSTOMER VALUE
+            </text>
+
+            <text
+              x="65"
+              y="461"
+              fill="#777"
+              font-size="11"
+              font-family="Arial"
+            >
+              HIGHER COST
+            </text>
+
+            <text
+              x="432"
+              y="80"
+              fill="#D8FF5A"
+              font-size="12"
+              font-family="Arial"
+              font-weight="700"
+            >
+              NEW FRONTIER
+            </text>
+
+            <text
+              x="110"
+              y="347"
+              fill="#fff"
+              fill-opacity=".72"
+              font-size="11"
+              font-family="Arial"
+            >
+              CURRENT OFFER
+            </text>
+
+            <text
+              x="250"
+              y="232"
+              fill="#fff"
+              fill-opacity=".78"
+              font-size="11"
+              font-family="Arial"
+            >
+              RE-DESIGN
+            </text>
+
           </svg>
-          <div class="visual-caption">The goal is not “more value at any cost.”<br><strong>It is value that the business can sustain.</strong></div>
+
+          <div class="visual-caption">
+            The goal is not “more value at any cost.”<br>
+            <strong>It is value that the business can sustain.</strong>
+          </div>
+
         </div>
       </div>
     </section>
+
 
     <!-- METHOD -->
-    <section class="section method cream" aria-labelledby="method-title">
+    <section
+      class="section method cream"
+      aria-labelledby="method-title"
+    >
       <div class="container">
+
         <div class="section-head reveal">
+
           <div>
-            <div class="section-label">04 / MY WORKING METHOD</div>
-            <h2 id="method-title">From messy question<br><span>to business action.</span></h2>
+            <div class="section-label">
+              MY WORKING METHOD
+            </div>
+
+            <h2 id="method-title">
+              From messy question<br>
+              <span>to business action.</span>
+            </h2>
           </div>
-          <p>I prefer focused problem-solving over generic consulting packages. The scope follows the business question.</p>
+
+          <p>
+            I prefer focused problem-solving over generic consulting packages.
+            The scope follows the business question.
+          </p>
+
         </div>
+
+
         <div class="method-grid">
-          <article class="method-step reveal"><div>01</div><h3>Frame</h3><p>Clarify the real problem, the customer, the market and the constraints.</p></article>
-          <article class="method-step reveal"><div>02</div><h3>Design</h3><p>Build possible value propositions, business models and growth routes.</p></article>
-          <article class="method-step reveal"><div>03</div><h3>Challenge</h3><p>Test the assumptions that matter most through data, customer logic and economics.</p></article>
-          <article class="method-step reveal"><div>04</div><h3>Execute</h3><p>Turn the decision into priorities, partnerships, pilots and measurable next actions.</p></article>
+
+          <article class="method-step reveal">
+            <h3>Frame</h3>
+            <p>
+              Clarify the real problem, the customer,
+              the market and the constraints.
+            </p>
+          </article>
+
+          <article class="method-step reveal">
+            <h3>Design</h3>
+            <p>
+              Build possible value propositions,
+              business models and growth routes.
+            </p>
+          </article>
+
+          <article class="method-step reveal">
+            <h3>Challenge</h3>
+            <p>
+              Test the assumptions that matter most through data,
+              customer logic and economics.
+            </p>
+          </article>
+
+          <article class="method-step reveal">
+            <h3>Execute</h3>
+            <p>
+              Turn the decision into priorities,
+              partnerships, pilots and measurable next actions.
+            </p>
+          </article>
+
         </div>
       </div>
     </section>
+
 
     <!-- SELECTED WORK -->
-    <section class="section selected" id="work" aria-labelledby="work-title">
+    <section
+      class="section selected"
+      id="work"
+      aria-labelledby="work-title"
+    >
       <div class="container">
+
         <div class="section-head reveal">
+
           <div>
-            <div class="section-label light">05 / SELECTED WORK</div>
-            <h2 id="work-title" class="white-title">Where this thinking<br><span>has been applied.</span></h2>
+            <div class="section-label light">
+              SELECTED WORK
+            </div>
+
+            <h2 id="work-title" class="white-title">
+              Where this thinking<br>
+              <span>has been applied.</span>
+            </h2>
           </div>
-          <p class="light-text">A selection of environments where product, business development, growth and commercial logic had to work together.</p>
+
+          <p class="light-text">
+            A selection of environments where product,
+            business development, growth and commercial logic
+            had to work together.
+          </p>
+
         </div>
+
 
         <div class="work-grid">
+
           <article class="work-card work-wide reveal">
-            <div class="work-top"><span>01</span><span>OPERATOR / DIGITAL ECOSYSTEM</span></div>
+
+            <div class="work-top">
+              <span>OPERATOR / DIGITAL ECOSYSTEM</span>
+            </div>
+
             <div class="work-art">
-              <svg viewBox="0 0 620 250" role="img" aria-label="Operator ecosystem graphic">
-                <line x1="62" y1="126" x2="170" y2="76"/><line x1="62" y1="126" x2="170" y2="178"/><line x1="170" y1="76" x2="311" y2="126"/><line x1="170" y1="178" x2="311" y2="126"/><line x1="311" y1="126" x2="460" y2="74"/><line x1="311" y1="126" x2="460" y2="181"/><line x1="460" y1="74" x2="560" y2="126"/><line x1="460" y1="181" x2="560" y2="126"/>
-                <circle cx="62" cy="126" r="18"/><circle cx="170" cy="76" r="15"/><circle cx="170" cy="178" r="15"/><circle cx="311" cy="126" r="34" fill="#D8FF5A"/><circle cx="460" cy="74" r="15"/><circle cx="460" cy="181" r="15"/><circle cx="560" cy="126" r="18"/>
-                <text x="311" y="130" text-anchor="middle" fill="#121212" font-size="10" font-weight="800">VALUE HUB</text>
+
+              <svg
+                viewBox="0 0 620 250"
+                role="img"
+                aria-label="Operator ecosystem graphic"
+              >
+
+                <line x1="62" y1="126" x2="170" y2="76"/>
+                <line x1="62" y1="126" x2="170" y2="178"/>
+                <line x1="170" y1="76" x2="311" y2="126"/>
+                <line x1="170" y1="178" x2="311" y2="126"/>
+                <line x1="311" y1="126" x2="460" y2="74"/>
+                <line x1="311" y1="126" x2="460" y2="181"/>
+                <line x1="460" y1="74" x2="560" y2="126"/>
+                <line x1="460" y1="181" x2="560" y2="126"/>
+
+                <circle cx="62" cy="126" r="18"/>
+                <circle cx="170" cy="76" r="15"/>
+                <circle cx="170" cy="178" r="15"/>
+                <circle
+                  cx="311"
+                  cy="126"
+                  r="34"
+                  fill="#D8FF5A"
+                />
+                <circle cx="460" cy="74" r="15"/>
+                <circle cx="460" cy="181" r="15"/>
+                <circle cx="560" cy="126" r="18"/>
+
+                <text
+                  x="311"
+                  y="130"
+                  text-anchor="middle"
+                  fill="#121212"
+                  font-size="10"
+                  font-weight="800"
+                >
+                  VALUE HUB
+                </text>
+
               </svg>
             </div>
-            <div class="work-copy"><h3>Operator Services &amp; Digital Ecosystems</h3><p>Working across product development, growth, subscriptions, bundles, partner models, operator billing and new service opportunities.</p></div>
-            <div class="tags"><span>Product Strategy</span><span>Growth</span><span>Commercialization</span><span>Partnerships</span></div>
+
+            <div class="work-copy">
+
+              <h3>
+                Operator Services &amp;
+                Digital Ecosystems
+              </h3>
+
+              <p>
+                Working across product development,
+                growth, subscriptions, bundles, partner models,
+                operator billing and new service opportunities.
+              </p>
+
+            </div>
+
+            <div class="tags">
+              <span>Product Strategy</span>
+              <span>Growth</span>
+              <span>Commercialization</span>
+              <span>Partnerships</span>
+            </div>
+
           </article>
+
 
           <article class="work-card reveal">
-            <div class="work-top"><span>02</span><span>DIGITAL COMMERCE</span></div>
-            <div class="work-copy compact"><h3>Marketplace Growth</h3><p>Hands-on experience from both merchant and advertiser perspectives, with a focus on acquisition, campaign performance and commercial growth.</p></div>
-            <div class="tags"><span>Marketplace</span><span>Growth</span><span>Commercial Strategy</span></div>
+
+            <div class="work-top">
+              <span>DIGITAL COMMERCE</span>
+            </div>
+
+            <div class="work-copy compact">
+
+              <h3>Marketplace Growth</h3>
+
+              <p>
+                Hands-on experience from both merchant
+                and advertiser perspectives, with a focus on acquisition,
+                campaign performance and commercial growth.
+              </p>
+
+            </div>
+
+            <div class="tags">
+              <span>Marketplace</span>
+              <span>Growth</span>
+              <span>Commercial Strategy</span>
+            </div>
+
           </article>
+
 
           <article class="work-card light-work reveal">
-            <div class="work-top"><span>03</span><span>BUSINESS MODEL DESIGN</span></div>
-            <div class="work-copy compact"><h3>Two-Sided Platform Logic</h3><p>Designed and validated a marketplace model connecting supply and demand, including MVP, revenue logic and market testing.</p></div>
-            <div class="tags"><span>Business Model</span><span>Marketplace</span><span>Validation</span></div>
+
+            <div class="work-top">
+              <span>BUSINESS MODEL DESIGN</span>
+            </div>
+
+            <div class="work-copy compact">
+
+              <h3>Two-Sided Platform Logic</h3>
+
+              <p>
+                Designed and validated a marketplace model
+                connecting supply and demand, including MVP,
+                revenue logic and market testing.
+              </p>
+
+            </div>
+
+            <div class="tags">
+              <span>Business Model</span>
+              <span>Marketplace</span>
+              <span>Validation</span>
+            </div>
+
           </article>
+
         </div>
       </div>
     </section>
+
 
     <!-- EXPERIENCE -->
-    <section class="section experience" id="experience" aria-labelledby="experience-title">
+    <section
+      class="section experience"
+      id="experience"
+      aria-labelledby="experience-title"
+    >
       <div class="container">
-        <div class="section-label reveal">06 / PROFESSIONAL EXPERIENCE</div>
-        <div class="experience-intro reveal">
-          <h2 id="experience-title">A career built across<br><span>product, market and business.</span></h2>
-          <p>I have worked across operator services, digital products, market development, industrial business cases and entrepreneurial projects. That mix shapes how I look at business problems: not through one department, but through the whole value chain.</p>
+
+        <div class="section-label reveal">
+          PROFESSIONAL EXPERIENCE
         </div>
+
+        <div class="experience-intro reveal">
+
+          <h2 id="experience-title">
+            A career built across<br>
+            <span>product, market and business.</span>
+          </h2>
+
+          <p>
+            I have worked across operator services,
+            digital products, market development,
+            industrial business cases and entrepreneurial projects.
+            That mix shapes how I look at business problems:
+            not through one department, but through the whole value chain.
+          </p>
+
+        </div>
+
 
         <div class="timeline">
+
           <article class="timeline-item current reveal">
-            <div class="timeline-point"><span></span></div>
-            <div class="timeline-meta">CURRENT</div>
-            <div><div class="company">HAMRAH KASHA VRZ-HAYE HOUSHMAND / MCI</div><h3>Senior Specialist — Business &amp; Service Development</h3><p>Product strategy, growth mechanisms, commercialization, partner models, bundles, operator billing and emerging digital business opportunities.</p></div>
+
+            <div class="timeline-point">
+              <span></span>
+            </div>
+
+            <div class="timeline-meta">
+              CURRENT
+            </div>
+
+            <div>
+
+              <div class="company">
+                HAMRAH KASHA VRZ-HAYE HOUSHMAND / MCI
+              </div>
+
+              <h3>
+                Senior Specialist — Business &amp;
+                Service Development
+              </h3>
+
+              <p>
+                Product strategy, growth mechanisms,
+                commercialization, partner models, bundles,
+                operator billing and emerging digital business opportunities.
+              </p>
+
+            </div>
           </article>
+
+
           <article class="timeline-item reveal">
-            <div class="timeline-point"><span></span></div>
-            <div class="timeline-meta">PREVIOUS</div>
-            <div><div class="company">RECO</div><h3>Product Specialist</h3><p>Revenue models, customer funnels, value proposition, pricing, growth experiments and digital marketing alignment.</p></div>
+
+            <div class="timeline-point">
+              <span></span>
+            </div>
+
+            <div class="timeline-meta">
+              PREVIOUS
+            </div>
+
+            <div>
+
+              <div class="company">
+                RECO
+              </div>
+
+              <h3>
+                Product Specialist
+              </h3>
+
+              <p>
+                Revenue models, customer funnels,
+                value proposition, pricing, growth experiments
+                and digital marketing alignment.
+              </p>
+
+            </div>
           </article>
+
+
           <article class="timeline-item reveal">
-            <div class="timeline-point"><span></span></div>
-            <div class="timeline-meta">PREVIOUS</div>
-            <div><div class="company">MINISTRY OF INDUSTRY, MINE &amp; TRADE</div><h3>Senior Business Development Specialist</h3><p>Feasibility studies, business cases, market analysis and economic models for industrial and technology projects.</p></div>
+
+            <div class="timeline-point">
+              <span></span>
+            </div>
+
+            <div class="timeline-meta">
+              PREVIOUS
+            </div>
+
+            <div>
+
+              <div class="company">
+                MINISTRY OF INDUSTRY, MINE &amp; TRADE
+              </div>
+
+              <h3>
+                Senior Business Development Specialist
+              </h3>
+
+              <p>
+                Feasibility studies, business cases,
+                market analysis and economic models
+                for industrial and technology projects.
+              </p>
+
+            </div>
           </article>
+
+
           <article class="timeline-item reveal">
-            <div class="timeline-point"><span></span></div>
-            <div class="timeline-meta">EARLIER</div>
-            <div><div class="company">DAMON · P&amp;F</div><h3>Market Development &amp; Project Management</h3><p>Market analysis, positioning, competitive assessment and project leadership across product launches and branding programs.</p></div>
+
+            <div class="timeline-point">
+              <span></span>
+            </div>
+
+            <div class="timeline-meta">
+              EARLIER
+            </div>
+
+            <div>
+
+              <div class="company">
+                DAMON · P&amp;F
+              </div>
+
+              <h3>
+                Market Development &amp;
+                Project Management
+              </h3>
+
+              <p>
+                Market analysis, positioning,
+                competitive assessment and project leadership
+                across product launches and branding programs.
+              </p>
+
+            </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ABOUT / EVIDENCE -->
-    <section class="section about" aria-labelledby="about-title">
+
+    <!-- ABOUT -->
+    <section
+      class="section about"
+      aria-labelledby="about-title"
+    >
       <div class="container about-grid">
+
         <div class="about-panel reveal">
-          <div class="section-label">07 / THE PERSON BEHIND THE WORK</div>
-          <h2 id="about-title">A hybrid lens.</h2>
-          <p>Industrial engineering trained. Product and growth experienced. Commercially curious. Comfortable moving between customer needs, product decisions, business economics and cross-functional execution.</p>
-          <div class="about-meta"><span>Industrial Engineering — MSc</span><span>Product · Growth · Business</span><span>Strategy · Commercialization</span></div>
+
+          <div class="section-label">
+            THE PERSON BEHIND THE WORK
+          </div>
+
+          <h2 id="about-title">
+            A hybrid lens.
+          </h2>
+
+          <p>
+            Industrial engineering trained.
+            Product and growth experienced.
+            Commercially curious.
+            Comfortable moving between customer needs,
+            product decisions, business economics
+            and cross-functional execution.
+          </p>
+
+          <div class="about-meta">
+            <span>Industrial Engineering — MSc</span>
+            <span>Product · Growth · Business</span>
+            <span>Strategy · Commercialization</span>
+          </div>
+
         </div>
+
+
         <div class="about-visual reveal">
-          <svg viewBox="0 0 600 520" role="img" aria-label="Abstract stacked business layers">
+
+          <svg
+            viewBox="0 0 600 520"
+            role="img"
+            aria-label="Abstract stacked business layers"
+          >
+
             <g transform="translate(70,58)">
-              <polygon points="0,95 230,0 460,95 230,190" fill="#D8FF5A"/>
-              <polygon points="0,95 230,190 230,260 0,165" fill="#95B331"/>
-              <polygon points="230,190 460,95 460,165 230,260" fill="#B4D24E"/>
-              <text x="230" y="98" text-anchor="middle" fill="#121212" font-size="18" font-weight="800">VALUE PROPOSITION</text>
+
+              <polygon
+                points="0,95 230,0 460,95 230,190"
+                fill="#D8FF5A"
+              />
+
+              <polygon
+                points="0,95 230,190 230,260 0,165"
+                fill="#95B331"
+              />
+
+              <polygon
+                points="230,190 460,95 460,165 230,260"
+                fill="#B4D24E"
+              />
+
+              <text
+                x="230"
+                y="98"
+                text-anchor="middle"
+                fill="#121212"
+                font-size="18"
+                font-weight="800"
+              >
+                VALUE PROPOSITION
+              </text>
+
             </g>
+
+
             <g transform="translate(90,188) scale(.92)">
-              <polygon points="0,95 230,0 460,95 230,190" fill="#8AA4FF"/>
-              <polygon points="0,95 230,190 230,260 0,165" fill="#6779BD"/>
-              <polygon points="230,190 460,95 460,165 230,260" fill="#7184CD"/>
-              <text x="230" y="98" text-anchor="middle" fill="#121212" font-size="18" font-weight="800">BUSINESS MODEL</text>
+
+              <polygon
+                points="0,95 230,0 460,95 230,190"
+                fill="#8AA4FF"
+              />
+
+              <polygon
+                points="0,95 230,190 230,260 0,165"
+                fill="#6779BD"
+              />
+
+              <polygon
+                points="230,190 460,95 460,165 230,260"
+                fill="#7184CD"
+              />
+
+              <text
+                x="230"
+                y="98"
+                text-anchor="middle"
+                fill="#121212"
+                font-size="18"
+                font-weight="800"
+              >
+                BUSINESS MODEL
+              </text>
+
             </g>
+
+
             <g transform="translate(110,316) scale(.84)">
-              <polygon points="0,95 230,0 460,95 230,190" fill="#D99FE0"/>
-              <polygon points="0,95 230,190 230,260 0,165" fill="#A576AB"/>
-              <polygon points="230,190 460,95 460,165 230,260" fill="#BA81C1"/>
-              <text x="230" y="98" text-anchor="middle" fill="#121212" font-size="18" font-weight="800">GROWTH &amp; EXECUTION</text>
+
+              <polygon
+                points="0,95 230,0 460,95 230,190"
+                fill="#D99FE0"
+              />
+
+              <polygon
+                points="0,95 230,190 230,260 0,165"
+                fill="#A576AB"
+              />
+
+              <polygon
+                points="230,190 460,95 460,165 230,260"
+                fill="#BA81C1"
+              />
+
+              <text
+                x="230"
+                y="98"
+                text-anchor="middle"
+                fill="#121212"
+                font-size="18"
+                font-weight="800"
+              >
+                GROWTH &amp; EXECUTION
+              </text>
+
             </g>
+
           </svg>
+
         </div>
       </div>
     </section>
+
 
     <!-- CONTACT -->
-    <section class="section contact dark-grid" id="contact" aria-labelledby="contact-title">
+    <section
+      class="section contact dark-grid"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
       <div class="container contact-grid">
+
         <div class="reveal">
-          <div class="section-label light">08 / LET'S TALK</div>
-          <h2 id="contact-title">Have a business problem worth reframing?</h2>
-          <p class="contact-lead">Tell me what you are trying to grow, fix, launch or redesign. We can start from the question—not from a predefined package.</p>
-          <a class="button button-acid large" href="mailto:aasbaghihadi@gmail.com">aasbaghihadi@gmail.com ↗</a>
+
+          <div class="section-label light">
+            LET'S TALK
+          </div>
+
+          <h2 id="contact-title">
+            Have a business problem worth reframing?
+          </h2>
+
+          <p class="contact-lead">
+            Tell me what you are trying to grow,
+            fix, launch or redesign.
+            We can start from the question—not from
+            a predefined package.
+          </p>
+
+          <a
+            class="button button-acid large"
+            href="mailto:aasbaghihadi@gmail.com"
+          >
+            aasbaghihadi@gmail.com ↗
+          </a>
+
         </div>
+
+
         <div class="contact-card reveal">
-          <div class="contact-card-title">A useful starting point</div>
+
+          <div class="contact-card-title">
+            A useful starting point
+          </div>
+
           <ol>
-            <li><span>01</span> What is happening now?</li>
-            <li><span>02</span> What would you like to change?</li>
-            <li><span>03</span> What is getting in the way?</li>
+            <li>
+              What is happening now?
+            </li>
+
+            <li>
+              What would you like to change?
+            </li>
+
+            <li>
+              What is getting in the way?
+            </li>
           </ol>
-          <div class="contact-foot">Business Development · Business Consulting · Growth Strategy</div>
+
+          <div class="contact-foot">
+            Business Development · Business Consulting · Growth Strategy
+          </div>
+
         </div>
+
       </div>
     </section>
+
   </main>
+
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span>Hadi Asbaghi</span>
-      <span>Business Development · Consulting · Growth</span>
-      <a href="#top">Back to top ↑</a>
+
+      <span>
+        Hadi Asbaghi
+      </span>
+
+      <span>
+        Business Development · Consulting · Growth
+      </span>
+
+      <a href="#top">
+        Back to top ↑
+      </a>
+
     </div>
   </footer>
+
 </body>
 </html>
